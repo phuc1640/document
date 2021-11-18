@@ -9,7 +9,7 @@ Here are some read phenomena that might occurs if a database is running at a low
 * First, `dirty read` phenomenon. It happens when a transaction reads data written by other concurrent transaction that has not been committed yet. This is terribly bad, because we don’t know if that other transaction will eventually be committed or rolled back. So we might end up using incorrect data in case rollback occurs.
 * The second phenomenon we might encounter is `non-repeatable read`. When a transaction reads the same record twice and see different values, because the row has been modified by other transaction that was committed after the first read.
 * `Phantom read` is a similar phenomenon, but affects queries that search for multiple rows instead of one. In this case, the same query is re-executed, but a different set of rows is returned, due to some changes made by other recently-committed transactions, such as inserting new rows or deleting existing rows which happen to satisfy the search condition of current transaction’s query.
-* Another phenomenon that involves the separation of a group of transactions is `serialization anomaly`. It’s when the result of a group of concurrent committed transactions could not be achieved if we try to run them sequentially in any order without overlapping each other.
+* Another phenomenon that involves the separation of a group of transactions is `serialization anomaly`. The result of successfully committing a group of transactions is inconsistent with all possible orderings of running those transactions one at a time.
 
 # 4 isolation levels
 
