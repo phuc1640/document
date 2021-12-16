@@ -84,3 +84,14 @@ Matches if `...` matches next, but doesn’t consume any of the string. This is 
 `(?!...)`
 
 Matches if `...` doesn’t match next. This is a negative lookahead assertion. For example, Isaac `(?!Asimov)` will match `Isaac ` only if it’s not followed by `Asimov`.
+
+# Example
+
+1. Check if the string is 24 hour time format
+
+2. Validate whether the string
+* Has one uppercase letters.
+* Has two lowercase letters.
+* Has two digits.
+* Has one special case letter.
+* Is of length 8.
