@@ -93,5 +93,5 @@ Matches if `...` doesn’t match next. This is a negative lookahead assertion. F
 * Has one uppercase letters.
 * Has two lowercase letters.
 * Has two digits.
-* Has one special case letter.
+* Has one special case letter [!@#$&*].
 * Is of length 8.
